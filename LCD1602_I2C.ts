@@ -123,8 +123,7 @@ namespace MY_I2C_LCD1602 {
      * make a custom graphic character
      * @param n is custom graphic number 0-7
      */
-    // block="make custom graphic %n"
-    //% block="make custom graphic "
+    //% block="make custom graphic %n"
     //% blockId="MY_I2C_LCD1620_MAKE_CUSTOM"
     //% imageLiteral=1
     //% imageLiteralColumns=5
