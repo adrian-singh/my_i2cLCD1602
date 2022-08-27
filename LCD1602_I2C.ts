@@ -167,7 +167,7 @@ namespace MY_I2C_LCD1602 {
      * @param x is LCD column position, [0 - 15], eg: 0
      * @param y is LCD row position, [0 - 1], eg: 0
      */
-    //% blockId="MY_I2C_LCD1620_SHOW_CUSTOM" block="show custom %n|at x %x|y %y"
+    //% blockId="MY_I2C_LCD1620_SHOW_CUSTOM" block="show custom graphic %n|at x %x|y %y"
     //% weight=90 blockGap=8
     //% n.min=0 n.max=7
     //% x.min=0 x.max=15
