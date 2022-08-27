@@ -133,8 +133,8 @@ namespace MY_I2C_LCD1602 {
     export function makeCustom(n: number, i: string): void {
         //...to do...
         let im = i
-        console.logValue("width", im.width())
-        console.logValue("height", im.height())
+        console.log("width", im.width())
+        console.log("height", im.height())
 //         for(let y = 0; y < im.height(); ++y) {
 //             for(let x = 0; x < im.width(); ++x) {
 //                 if (im.pixel(x, y)) {
