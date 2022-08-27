@@ -134,7 +134,7 @@ namespace MY_I2C_LCD1602 {
         let im = i
         console.logValue(“width”, im.width())
         console.logValue(“height”, im.height())
-        return i;
+        return im;
     }    
 
     /**
