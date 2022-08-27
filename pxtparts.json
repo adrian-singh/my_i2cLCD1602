@@ -26,7 +26,7 @@
     "numberOfPins": 4,
     "instantiation": {
       "kind": "function",
-      "fullyQualifiedName": "MY_I2C_LCD1602.LcdInit,MY_I2C_LCD1602.ShowNumber,MY_I2C_LCD1602.ShowString,MY_I2C_LCD1602.ShowHeart,MY_I2C_LCD1602.on,MY_I2C_LCD1602.off,MY_I2C_LCD1602.clear,MY_I2C_LCD1602.BacklightOn,MY_I2C_LCD1602.BacklightOff,MY_I2C_LCD1602.shl,MY_I2C_LCD1602.shr",
+      "fullyQualifiedName": "MY_I2C_LCD1602.LcdInit,MY_I2C_LCD1602.ShowNumber,MY_I2C_LCD1602.ShowString,MY_I2C_LCD1602.ShowCustom,MY_I2C_LCD1602.on,MY_I2C_LCD1602.off,MY_I2C_LCD1602.clear,MY_I2C_LCD1602.BacklightOn,MY_I2C_LCD1602.BacklightOff,MY_I2C_LCD1602.shl,MY_I2C_LCD1602.shr",
       "argumentRoles": [
         {
           "pinInstantiationIdx": 0
