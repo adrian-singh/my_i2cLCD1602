@@ -129,11 +129,19 @@ namespace MY_I2C_LCD1602 {
     //% imageLiteralColumns=5
     //% imageLiteralRows=8
     //% n.min=0 n.max=7
+    //% shim=images::createImage
     export function makeCustom(n: number, i: string): Image {
         //...to do...
         let im = i
         console.logValue(“width”, im.width())
         console.logValue(“height”, im.height())
+//         for(let y = 0; y < im.height(); ++y) {
+//             for(let x = 0; x < im.width(); ++x) {
+//                 if (im.pixel(x, y)) {
+//                     ...set bit in char...
+//                 }
+//             }
+//         }
         return im;
     }    
 
