@@ -132,8 +132,9 @@ namespace MY_I2C_LCD1602 {
     // n.min=0 n.max=7
     export function makeCustom(i: string, n: string): void {
         //...to do...
-        //console.logValue("n:", n) 
-        console.logValue("i:", i) 
+        console.logValue("val n:", n) 
+        console.logValue("val i:", i) 
+        console.log("i:", i) 
 //         for(let y = 0; y < im.height(); ++y) {
 //             for(let x = 0; x < im.width(); ++x) {
 //                     ...set bit in char...
