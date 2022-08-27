@@ -131,6 +131,10 @@ namespace MY_I2C_LCD1602 {
     //% n.min=0 n.max=7
     export function makeCustom(n: number, i: string): Image {
         //...to do...
+        let im = i
+        console.logValue(“width”, im.width())
+        console.logValue(“height”, im.height())
+        return i;
     }    
 
     /**
