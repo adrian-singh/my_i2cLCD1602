@@ -120,6 +120,19 @@ namespace MY_I2C_LCD1602 {
     }
 
     /**
+     * make a custom graphic character
+     * @param n is custom graphic number 0-7
+     */
+    //% block="make custom graphic %n"
+    //% blockId="MY_I2C_LCD1620_MAKE_CUSTOM"
+    //% imageLiteral=1
+    //% imageLiteralColumns=5
+    //% imageLiteralRows=8
+    export function makeCustom(i: string): Image {
+        //...to do...
+    }    
+
+    /**
      * show a number in LCD at given position
      * @param n is number will be show, eg: 10, 100, 200
      * @param x is LCD column position, eg: 0
