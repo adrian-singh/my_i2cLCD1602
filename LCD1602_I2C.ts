@@ -96,7 +96,7 @@ namespace MY_I2C_LCD1602 {
         
         //define custom chartacter 0 = 'heart'
         basic.pause(5)
-        cmd(0x48)
+        cmd(0x40)
         dat(0)
         dat(10)
         dat(31)
@@ -108,7 +108,7 @@ namespace MY_I2C_LCD1602 {
         
         //define custom chartacter 1 = 'cross'
         basic.pause(5)
-        cmd(0x40)
+        cmd(0x48)
         dat(6)
         dat(6)
         dat(15)
