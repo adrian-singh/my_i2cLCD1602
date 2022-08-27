@@ -105,6 +105,18 @@ namespace MY_I2C_LCD1602 {
         dat(14)
         dat(4)
         dat(0)
+        
+        //define custom chartacter 1 = 'cross'
+        basic.pause(5)
+        cmd(0x40)
+        dat(6)
+        dat(6)
+        dat(15)
+        dat(15)
+        dat(6)
+        dat(6)
+        dat(6)
+        dat(6)        
     }
 
     /**
@@ -150,16 +162,18 @@ namespace MY_I2C_LCD1602 {
     }
 
     /**
-     * show a heart in LCD at given position
+     * show custom graphic in LCD at given position
+     * @param n is custom graphic number 0-7
      * @param x is LCD column position, [0 - 15], eg: 0
      * @param y is LCD row position, [0 - 1], eg: 0
      */
-    //% blockId="MY_I2C_LCD1620_SHOW_HEART" block="show heart at x %x|y %y"
+    //% blockId="MY_I2C_LCD1620_SHOW_CUSTOM" block="show custom %n|at x %x|y %y"
     //% weight=90 blockGap=8
+    //% n.min=0 n.max=7
     //% x.min=0 x.max=15
     //% y.min=0 y.max=1
     //% parts=LCD1602_I2C trackArgs=0
-    export function ShowHeart(x: number, y: number): void {
+    export function ShowCustom(n: number, x: number, y: number): void {
         let a: number
         
         if (y > 0)
@@ -169,7 +183,7 @@ namespace MY_I2C_LCD1602 {
         a += x
         cmd(a)
 
-        dat(0) // 0 = user defined heart (88 = 'X')
+        dat(n) // n = custom graphic 0-7
     }
     
     /**
