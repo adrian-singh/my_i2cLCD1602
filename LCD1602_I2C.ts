@@ -123,17 +123,17 @@ namespace MY_I2C_LCD1602 {
      * make a custom graphic character
      * @param n is custom graphic number 0-7
      */
-    //% block="make custom graphic %n|"
+    //% block="make custom graphic %n"
     //% blockId="MY_I2C_LCD1620_MAKE_CUSTOM"
+    //% n.min=0 n.max=7
     //% imageLiteral=1
     //% imageLiteralColumns=5
     //% imageLiteralRows=8
-    //% n.min=0 n.max=7
     //% shim=images::createImage
-    export function makeCustom(i: string, n: number): void {
+    export function makeCustom(n: number, i: string): void {
         //...to do...
-        console.logValue("i:", i) 
         console.logValue("n:", n) 
+        console.logValue("i:", i) 
 //         for(let y = 0; y < im.height(); ++y) {
 //             for(let x = 0; x < im.width(); ++x) {
 //                     ...set bit in char...
