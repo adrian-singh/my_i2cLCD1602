@@ -93,6 +93,18 @@ namespace MY_I2C_LCD1602 {
         cmd(0x0C)
         cmd(0x06)
         cmd(0x01)       // clear
+        
+        //define custom chartacter 0 = 'heart'
+        basic.pause(5)
+        cmd(0x40)
+        dat(0)
+        dat(10)
+        dat(31)
+        dat(31)
+        dat(31)
+        dat(14)
+        dat(4)
+        dat(0)
     }
 
     /**
@@ -149,7 +161,7 @@ namespace MY_I2C_LCD1602 {
     //% parts=LCD1602_I2C trackArgs=0
     export function ShowHeart(x: number, y: number): void {
         let a: number
-
+        
         if (y > 0)
             a = 0xC0
         else
@@ -157,7 +169,7 @@ namespace MY_I2C_LCD1602 {
         a += x
         cmd(a)
 
-        dat(88) // 'X'
+        dat(0) // 0 = user defined heart (88 = 'X')
     }
     
     /**
