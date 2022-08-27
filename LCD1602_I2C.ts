@@ -130,7 +130,7 @@ namespace MY_I2C_LCD1602 {
     //% imageLiteralColumns=5
     //% imageLiteralRows=8
     //% shim=images::createImage
-    export function makeCustom(n: number, i: string): void {
+    export function makeCustom(i: string, n: number): void {
         //...to do...
         console.logValue("n:", n) 
         console.logValue("i:", i) 
