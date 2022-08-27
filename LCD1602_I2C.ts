@@ -157,7 +157,7 @@ namespace MY_I2C_LCD1602 {
         a += x
         cmd(a)
 
-        dat('X')
+        dat(88) // 'X'
     }
     
     /**
