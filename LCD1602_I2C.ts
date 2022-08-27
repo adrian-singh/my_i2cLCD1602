@@ -138,6 +138,29 @@ namespace MY_I2C_LCD1602 {
     }
 
     /**
+     * show a heart in LCD at given position
+     * @param x is LCD column position, [0 - 15], eg: 0
+     * @param y is LCD row position, [0 - 1], eg: 0
+     */
+    //% blockId="MY_I2C_LCD1620_SHOW_HEART" block="show heart at x %x|y %y"
+    //% weight=90 blockGap=8
+    //% x.min=0 x.max=15
+    //% y.min=0 y.max=1
+    //% parts=LCD1602_I2C trackArgs=0
+    export function ShowHeart(x: number, y: number): void {
+        let a: number
+
+        if (y > 0)
+            a = 0xC0
+        else
+            a = 0x80
+        a += x
+        cmd(a)
+
+        dat('X')
+    }
+    
+    /**
      * turn on LCD
      */
     //% blockId="MY_I2C_LCD1620_ON" block="turn on LCD"
