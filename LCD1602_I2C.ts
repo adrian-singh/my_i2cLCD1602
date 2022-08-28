@@ -121,31 +121,41 @@ namespace MY_I2C_LCD1602 {
 
     /**
      * make a custom graphic character
-     * @param n is custom graphic number 0-7
+     * @param i is a graphic image
+     * @param n is custom CG-RAM char number 0-7
      */
-    // block="make custom graphic %n"
-    //% block="make custom graphic"
     //% blockId="MY_I2C_LCD1620_MAKE_CUSTOM"
+    //% block="make custom graphic %i at %n"
+    //% n.min=0 n.max=7
+    export function makeCustom(i: Image, n: number): void {
+        if (!i) return
+        let addr = 0x40 + n*8 // calc CG-RAM address (0x40 is base for char 0)
+        cmd(addr) // set writing to CG-RAM
+        
+        for (let row=0; row<8; row++) {
+            let val = 0
+            for (let col=0; col<5; col++) {
+                if (i.pixel(col, row) != false)
+                    val += Math.pow(2, 4-col)
+            }
+            dat(val) // send the data values
+        }
+    }
+
+    /**
+     * design a graphic
+     */
+    //% blockId="MY_I2C_LCD1620_MAKE_GRAPHIC"
+    //% block="make graphic"
     //% imageLiteral=1
     //% imageLiteralColumns=5
     //% imageLiteralRows=8
-    //% shim=images::createImage
-    // n.min=0 n.max=7
-    //export function makeCustom(i: string, n: number): void {
-    export function makeCustom(i: string): void {
-        //...to do...
-        //console.log("n: "+n) 
-        console.log("i:")
-        console.log(i)
-        
-//         for(let y = 0; y < im.height(); ++y) {
-//             for(let x = 0; x < im.width(); ++x) {
-//                     ...set bit in char...
-//                 }
-//             }
-//         }
-    }    
-
+    // shim=images::createImage
+    export function makeGraphic(i: string): Image {
+        let im = <Image><any>i
+        return im;
+    }  
+    
     /**
      * show a number in LCD at given position
      * @param n is number will be show, eg: 10, 100, 200
