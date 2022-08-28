@@ -130,7 +130,7 @@ namespace MY_I2C_LCD1602 {
     export function makeCustom(i: Image, n: number): void {
         if (!i) return
         
-        let vals = []
+        let vals: number[] = []
         for (let row=0; row<8; row++) {
             let val = 0
             for (let col=0; col<5; col++) {
