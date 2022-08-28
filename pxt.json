@@ -1,6 +1,6 @@
 {
     "name": "my_i2cLCD1602",
-    "version": "1.6.8",
+    "version": "1.6.9",
     "description": "makecode I2C LCD1602 extension for micro:bit",
     "license": "MIT",
     "dependencies": {
