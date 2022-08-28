@@ -136,8 +136,7 @@ namespace MY_I2C_LCD1602 {
         //...to do...
         //console.log("n: "+n) 
         console.log("i:")
-        console.log(i) 
-        console.dir(i) 
+        console.log(i)
         
 //         for(let y = 0; y < im.height(); ++y) {
 //             for(let x = 0; x < im.width(); ++x) {
