@@ -120,6 +120,25 @@ namespace MY_I2C_LCD1602 {
     }
 
     /**
+     * make a dummy graphic character and display it
+     */
+    //% blockId="MY_I2C_LCD1620_DUMMY"
+    //% block="display dummy graphic"
+    export function makeDummy(): void {
+        basic.pause(5)        
+        cmd(80)
+        dat(1)
+        dat(2)
+        dat(4)
+        dat(8)
+        dat(16)
+        dat(31)
+        dat(31)
+        dat(31)
+        ShowCustom(2,0,0)
+    }
+
+    /**
      * make a custom graphic character
      * @param i is a graphic image
      * @param n is custom CG-RAM char number 0-7
@@ -130,17 +149,6 @@ namespace MY_I2C_LCD1602 {
     export function makeCustom(i: Image, n: number): void {
         if (!i) return
         
-        basic.pause(5)        
-        cmd(0x40)
-        dat(1)
-        dat(2)
-        dat(4)
-        dat(8)
-        dat(16)
-        dat(31)
-        dat(31)
-        dat(31)
-/*
         let addr = 0x40 + n*8 // calc CG-RAM address (0x40 is base for char 0)
         console.log("cmd("+addr+")")
         
@@ -156,7 +164,6 @@ namespace MY_I2C_LCD1602 {
             console.log("dat("+val+")")
             dat(val)
         }
-*/        
     }
 
     /**
