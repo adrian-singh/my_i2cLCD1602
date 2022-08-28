@@ -154,7 +154,7 @@ namespace MY_I2C_LCD1602 {
         console.log("cmd("+addr+")")
         
         basic.pause(5)
-        cmd(addr) // set writing to CG-RAM
+        cmd(80) // set writing to CG-RAM
         dat(1)
         dat(2)
         dat(4)
