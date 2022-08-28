@@ -139,7 +139,7 @@ namespace MY_I2C_LCD1602 {
             }
             //console.log("dat("+val+")")
             console.log("val:"+val)
-            push(val)
+            vals.push(val)
         }
         
         let addr = 0x40 + n*8 // calc CG-RAM address (0x40 is base for char 0)
