@@ -131,7 +131,7 @@ namespace MY_I2C_LCD1602 {
         if (!i) return
         
         basic.pause(5)        
-        cmd(80)
+        cmd(0x40)
         dat(1)
         dat(2)
         dat(4)
