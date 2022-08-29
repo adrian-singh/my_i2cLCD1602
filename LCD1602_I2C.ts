@@ -150,14 +150,14 @@ namespace MY_I2C_LCD1602 {
         
         if (!i) return
         
-        let addr = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
+        let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
         console.log("cmd("+addr+")")
         
         basic.pause(5)
-        cmd(addr) // set writing to CG-RAM
+        cmd(80) // set writing to CG-RAM
 
         for (let row=0; row<8; row++) {
-            let val = 0
+            let val: number = 0
             for (let col=0; col<5; col++) {
                 if (i.pixel(col, row) != false)
                     val += Math.pow(2, 4-col)
