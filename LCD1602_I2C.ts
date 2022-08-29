@@ -162,7 +162,7 @@ namespace MY_I2C_LCD1602 {
                 if (i.pixel(col, row) != false)
                     val += Math.pow(2, 4-col)
             }
-            console.log("dat("+val+")")
+            //console.log("dat("+val+")")
             dat(val)
         }         
         ShowCustom(n,0,0)
