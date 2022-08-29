@@ -120,25 +120,6 @@ namespace MY_I2C_LCD1602 {
     }
 
     /**
-     * make a dummy graphic character and display it
-     */
-    //% blockId="MY_I2C_LCD1620_DUMMY"
-    //% block="display dummy graphic"
-    export function makeDummy(): void {
-        basic.pause(5)        
-        cmd(80)
-        dat(1)
-        dat(2)
-        dat(4)
-        dat(8)
-        dat(16)
-        dat(31)
-        dat(31)
-        dat(31)
-        ShowCustom(2,0,0)
-    }
-
-    /**
      * make a custom graphic character
      * @param i is a graphic image
      * @param n is custom CG-RAM char number 0-7
@@ -169,6 +150,7 @@ namespace MY_I2C_LCD1602 {
 
     /**
      * design a graphic
+     * (note the 'shim' line is essential or it won't work!)
      */
     //% blockId="MY_I2C_LCD1620_MAKE_GRAPHIC"
     //% block="make graphic"
