@@ -152,10 +152,19 @@ namespace MY_I2C_LCD1602 {
         
         let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
         //console.log("cmd("+addr+")")
+                
+        basic.pause(5)
+        cmd(addr) // set writing to CG-RAM
+        dat(6)
+        dat(6)
+        dat(15)
+        dat(15)
+        dat(6)
+        dat(6)
+        dat(6)
+        dat(6) 
+        ShowCustom(n,0,0)        
         
-        //basic.pause(5)
-        //cmd(addr) // set writing to CG-RAM
-/*        
         let vals: number[] = []
         for (let row=0; row<8; row++) {
             let val: number = 0
@@ -167,18 +176,6 @@ namespace MY_I2C_LCD1602 {
             //dat(val)
             vals.push(val)
         }
-*/
-        basic.pause(5)
-        cmd(addr) // set writing to CG-RAM
-        dat(6)
-        dat(6)
-        dat(15)
-        dat(15)
-        dat(6)
-        dat(6)
-        dat(6)
-        dat(6) 
-        ShowCustom(n,0,0)
     }
 
     /**
