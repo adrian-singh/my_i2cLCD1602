@@ -165,7 +165,6 @@ namespace MY_I2C_LCD1602 {
             //console.log("dat("+val+")")
             dat(val)
         }
-        ShowCustom(n,0,0)        
     }
 
     /**
