@@ -155,16 +155,7 @@ namespace MY_I2C_LCD1602 {
         
         basic.pause(5)
         cmd(addr) // set writing to CG-RAM
-        dat(1)
-        dat(2)
-        dat(4)
-        dat(8)
-        dat(16)
-        dat(31)
-        dat(1)
-        dat(1)
-        ShowCustom(2,0,0)
-/*        
+        
         for (let row=0; row<8; row++) {
             let val: number = 0
             for (let col=0; col<5; col++) {
@@ -173,8 +164,8 @@ namespace MY_I2C_LCD1602 {
             }
             console.log("dat("+val+")")
             dat(val)
-        } 
-*/        
+        }         
+        ShowCustom(n,0,0)
     }
 
     /**
