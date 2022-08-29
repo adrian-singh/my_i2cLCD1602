@@ -155,7 +155,8 @@ namespace MY_I2C_LCD1602 {
         
         basic.pause(5)
         cmd(addr) // set writing to CG-RAM
-/*        
+        
+        let vals: number[] = []
         for (let row=0; row<8; row++) {
             let val: number = 0
             for (let col=0; col<5; col++) {
@@ -163,9 +164,10 @@ namespace MY_I2C_LCD1602 {
                     val += Math.pow(2, 4-col)
             }
             //console.log("dat("+val+")")
-            dat(val)
+            //dat(val)
+            vals.push(val)
         }
-*/
+
         dat(6)
         dat(6)
         dat(15)
