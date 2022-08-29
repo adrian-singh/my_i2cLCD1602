@@ -150,7 +150,7 @@ namespace MY_I2C_LCD1602 {
         
         //if (!i) return
         
-        //let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
+        let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
         //console.log("cmd("+addr+")")
         
         basic.pause(5)
