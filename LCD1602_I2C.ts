@@ -148,27 +148,18 @@ namespace MY_I2C_LCD1602 {
     //% n.min=0 n.max=7
     export function makeCustom(i: Image, n: number): void {
         
-        //if (!i) return
+        if (!i) return
         
         let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
         //console.log("cmd("+addr+")")
                 
         basic.pause(5)
         cmd(addr) // set writing to CG-RAM
-//         dat(6)
-//         dat(6)
-//         dat(15)
-//         dat(15)
-//         dat(6)
-//         dat(6)
-//         dat(6)
-//         dat(6) 
-        
+
         for (let row=0; row<8; row++) {
             let val: number = 0
             for (let col=0; col<5; col++) {
                 if (i.pixel(col, row) != false)
-                //if ((row % col) == 0)
                     val += Math.pow(2, 4-col)
             }
             //console.log("dat("+val+")")
