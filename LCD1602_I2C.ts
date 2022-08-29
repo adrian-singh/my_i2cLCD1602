@@ -148,7 +148,7 @@ namespace MY_I2C_LCD1602 {
     //% n.min=0 n.max=7
     export function makeCustom(i: Image, n: number): void {
         
-        if (!i) return
+        //if (!i) return
         
         let addr: number = (64 + n*8) // calc CG-RAM address (0x40 is base for char 0)
         //console.log("cmd("+addr+")")
@@ -167,8 +167,8 @@ namespace MY_I2C_LCD1602 {
         for (let row=0; row<8; row++) {
             let val: number = 0
             for (let col=0; col<5; col++) {
-                //if (i.pixel(col, row) != false)
-                if ((row % col) == 0)
+                if (i.pixel(col, row) != false)
+                //if ((row % col) == 0)
                     val += Math.pow(2, 4-col)
             }
             //console.log("dat("+val+")")
@@ -185,7 +185,7 @@ namespace MY_I2C_LCD1602 {
     //% imageLiteral=1
     //% imageLiteralColumns=5
     //% imageLiteralRows=8
-    // shim=images::createImage
+    //% shim=images::createImage
     export function makeGraphic(i: string): Image {
         let im = <Image><any>i
         return im;
