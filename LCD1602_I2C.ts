@@ -155,38 +155,28 @@ namespace MY_I2C_LCD1602 {
                 
         basic.pause(5)
         cmd(addr) // set writing to CG-RAM
-        dat(6)
-        dat(6)
-        dat(15)
-        dat(15)
-        dat(6)
-        dat(6)
-        dat(6)
-        dat(6) 
-        ShowCustom(n,0,0)        
+//         dat(6)
+//         dat(6)
+//         dat(15)
+//         dat(15)
+//         dat(6)
+//         dat(6)
+//         dat(6)
+//         dat(6) 
         
-        let vals: number[] = []
         for (let row=0; row<8; row++) {
             let val: number = 0
             for (let col=0; col<5; col++) {
-                if (i.pixel(col, row) != false)
-                    val += pow(2, 4-col)
+                //if (i.pixel(col, row) != false)
+                if ((row % col) == 0)
+                    val += Math.pow(2, 4-col)
             }
             //console.log("dat("+val+")")
-            //dat(val)
-            vals.push(val)
+            dat(val)
         }
+        ShowCustom(n,0,0)        
     }
 
-    function pow(base: number, exp: number): number {
-        if (exp == 0) return 1
-        let tot = base
-        for (let c=1; c<exp; c++) {
-            tot = tot * base
-        }
-        return tot
-    }
-    
     /**
      * design a graphic
      */
