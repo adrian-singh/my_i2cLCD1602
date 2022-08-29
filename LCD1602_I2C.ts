@@ -170,7 +170,7 @@ namespace MY_I2C_LCD1602 {
             let val: number = 0
             for (let col=0; col<5; col++) {
                 if (i.pixel(col, row) != false)
-                    val += Math.pow(2, 4-col)
+                    val += pow(2, 4-col)
             }
             //console.log("dat("+val+")")
             //dat(val)
@@ -178,6 +178,15 @@ namespace MY_I2C_LCD1602 {
         }
     }
 
+    function pow(base: number, exp: number): number {
+        if (exp == 0) return 1
+        let tot = base
+        for (let c=1; c<exp; c++) {
+            tot = tot * base
+        }
+        return tot
+    }
+    
     /**
      * design a graphic
      */
